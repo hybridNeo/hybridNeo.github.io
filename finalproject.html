@@ -1,0 +1,124 @@
+<!doctype html>
+<!--
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A portfolio template that uses Material Design Lite.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Rahul Shivu Mahadev</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.grey-pink.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
+            <div class="mdl-layout__header-row portfolio-logo-row">
+                <span class="mdl-layout__title">
+                    <div class="portfolio-logo"></div>
+                    <span class="mdl-layout__title" style="font-size:150%;color:#ffffff">Rahul Shivu Mahadev</span>
+                </span>
+            </div>
+            <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
+                <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+                    <a style="color:#ffffff" class="mdl-navigation__link " href="index.html">About Me</a>
+                    <a style="color:#ffffff" class="mdl-navigation__link is-active" href="projects.html">Projects</a>
+                    <a style="color:#ffffff" class="mdl-navigation__link" href="awards.html">Awards</a>
+                    <a style="color:#ffffff" class="mdl-navigation__link" href="contact.html">Contact</a>
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+            <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+                <a class="mdl-navigation__link is-active" href="index.html">About Me</a>
+                <a class="mdl-navigation__link" href="projects.html">Projects</a>
+                <a class="mdl-navigation__link" href="awards.html">Awards</a>
+                <a class="mdl-navigation__link" href="contact.html">Contact</a>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="mdl-grid portfolio-max-width">
+                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Using Trusted Execution Environments to enable Integrity of Offline Tests</h2>
+                    </div>
+                    <div class="mdl-grid portfolio-copy">
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding">
+                            <p>
+                                As a part of the Engineering course in PESIT we were supposed to complete a project which culminated an entire semester's work. 
+                            </p>
+                            <p>
+                                For this project I was guided by my Professor <b> Dr. Viraj Kumar </b> and two other external guides (1) <b>Dr. Arvind Seshadri of IBM Research </b> and (2) <b>Dr. Sriram Rajamani of Microsoft Research</b>. I was tasked to develop a system which could provide a secure and trust-worthy experience for offline quiz-taking. The results of this project were published as a paper and also a poster was presented in the <b>IBM I-Care 2016 Conference</b>.
+                            </p>
+                        </div>
+                        <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Abstract</h3>
+                       
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <p>
+                                Today automated assessment in online courses (MOOCs, SPOCS, etc.)
+                                is done in a client-server fashion. The only trusted component is the server as it
+                                is run by the test creator. The user accesses the automated assessment module by
+                                logging into the server using their mobile device. The server sends questions to
+                                the user’s device one-by-one. For each question, the user types their answer into
+                                their device, which is then transmitted to the server for evaluation and scoring.
+                                This process requires constant internet connectivity on the user’s device, which
+                                may be a difficult requirement in developing nations. For evaluating complex
+                                assignments, it also places significant load on the server. This paper is aims to
+                                address these issues by providing a secure offline solution for the automated assessment
+                                problem. An offline approach performs the evaluation and scoring on
+                                the user’s mobile device and we must protect the evaluation and scoring process
+                                from being tampered by the user. To achieve this, we divide the assessment module
+                                into two parts:<ol> <li> An untrusted user facing GUI component, and </li><li> A trusted
+                                enclave component that handles the evaluation and scoring, and use a hardwarerooted
+                                isolated execution technology (ARM TrustZone) to create an isolated enclave
+                                for the execution of the enclave component.</li></ol> The execution of the enclave
+                                component remains untampered due to the isolation provided by ARM Trust-
+                                Zone. With this approach we can successfully encourage the adoption of online
+                                courses in developing nations with limited internet connectivity and also reduce
+                                the load on the server during the assessment.
+                            </p>
+                        </div>
+                        <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Important Links</h3>
+                        <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
+                            <p>
+                                    
+                                    <h6 style="color:blue">Github: <a target="_blank" href="https://github.com/hybridNeo/secure_quiz">https://github.com/hybridNeo/secure_quiz</a></h6>
+                                    <h6 style="color:blue">Poster: <a target="_blank" href="icare_poster.pptx"> Poster.pptx</a> </h6>
+                                    <h6 style="color:blue">Paper:    <a target="_blank" href="secure_quiz_ver_4.pdf"> Paper.pdf</a> </h6>                                
+                                    <h6 style="color:blue">Blog:&nbsp;&nbsp; <a href="http://mahadevrahul.blogspot.in/2016/01/chapter-1-beginning.html" taget="_blank"> http://mahadevrahul.blogspot.in</a></h6>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer__left-section">
+                    <div class="mdl-logo">Rahul Shivu Mahadev</div>
+                </div>
+                
+            </footer>
+        </main>
+    </div>
+    <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+</body>
+
+</html>

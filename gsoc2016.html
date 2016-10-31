@@ -1,0 +1,210 @@
+<!doctype html>
+<!--
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A portfolio template that uses Material Design Lite.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Rahul Shivu Mahadev</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.grey-pink.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+</head>
+
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
+            <div class="mdl-layout__header-row portfolio-logo-row">
+                <span class="mdl-layout__title">
+                    <div class="portfolio-logo"></div>
+                    <span class="mdl-layout__title" style="font-size:150%;color:#ffffff">Rahul Shivu Mahadev</span>
+                </span>
+            </div>
+            <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
+                <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+                    <a style="color:#ffffff" class="mdl-navigation__link " href="index.html">About Me</a>
+                    <a style="color:#ffffff" class="mdl-navigation__link is-active" href="projects.html">Projects</a>
+                    <a style="color:#ffffff" class="mdl-navigation__link" href="awards.html">Awards</a>
+                    <a style="color:#ffffff" class="mdl-navigation__link" href="contact.html">Contact</a>
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+            <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+                <a class="mdl-navigation__link is-active" href="index.html">About Me</a>
+                <a class="mdl-navigation__link" href="projects.html">Projects</a>
+                <a class="mdl-navigation__link" href="awards.html">Awards</a>
+                <a class="mdl-navigation__link" href="contact.html">Contact</a>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="mdl-grid portfolio-max-width">
+                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+                    <div class="mdl-card__title">
+                        <center><h2 class="mdl-card__title-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Architecture independant Trusted Execution Environment based the seL4 microkernel</h2></center>
+                    </div>
+                    <div class="mdl-grid portfolio-copy">
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding">
+                            <p>
+                               I applied to the prestigious Google Summer of Code program for the second time in 2016, this time with the open source organization lowRISC, who pioneers in the manufacturing process of low cost mass produced RISC-V architecture based SoC's. 
+                               <a href ="https://summerofcode.withgoogle.com/projects/?sp-search=rahulmahadev#6371207674855424" target="_blank" >Google Project Link</a>
+                            </p>
+                            <center><a class="article-image" height = "5px" href="http://www.lowrisc.org/" target="_blank" ><img src="images/lowrisc.png" /></a></center>
+                            <p>
+                                I was mentored by Stefan Wallentowitz of lowRISC and also Hesham Almatery who had experience in seL4 and RISC-V. I was tasked to build a TEE for the RISC-V platform. The platform still being in infancy has a lot of environemnts to be desired for.
+                            </p>
+                        </div>
+                        <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Architecture</h3>
+                       
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                            <p>
+                                seL4 is a formally verified kernel with complete end to end proofs, therefore it is suitable for building a system which can be trusted.
+                            </p>
+                            <img src="images/gs161.png"/>
+                            <p>
+                            The seL4 kernel provides very limited functionality like IPC's and memory management  in accordance to microkernel design, which is the reason for its secure nature.
+                            <br>
+                            <b>seL4 kernel:</b>
+                            The sel4 kernel provides basic functionality like IPC and memory management. It also allows two threads/processes to be completely isolated with the concept of capability spaces.
+                            <br>
+                            <b>Tee-os container:</b> This is the root task of the system, this is loaded first and basically spawns the rich-os and Trusted applications in separate isolated threads. It allows manages communicated between the client and the trusted app.
+                            <br>
+                            <b>Rich-OS: </b> rich os is an operating system with a wealth features eg. Linux, Android. For the sake if this project the rich-os is just a simple stub os. This is preferably virtualized in the real world. A hypervisor would sit above this level in that case.
+                            <br>
+                            <b>Client App: </b> The client app is the client facing part of the application It is started in the rich-os , it makes use of tee_client_api to communicate with the Trusted application/tee-container.
+                            <br>
+                            <b> Trusted Application:</b> The trusted application sits in an isolated container and has access to the tee_internal_api to communicate with the tee-container/client app and the tee_crpyto_api which provides cryptographic operations.
+
+                            </p>
+                        </div>
+
+                    <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Features</h3>
+                     <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                        <p>
+                            This section will explain the features of TEE-OS. The design principles and features have been heavily inspired by OPTEE-OS and are in compliance with the GlobalPlatform standard for TEE's. The process of writing client and secure apps for seL4 TEE-OS is very similar to OPTEE-OS. A number of functions need to be implemented on both the components and function names and TA names are provided in config files.
+                        </p>
+                        <pre class="prettyprint">
+void encrypt(char *arr){
+ uint8_t key[16];
+ uint8_t plaintext[16];
+ uint8_t ciphertext[16];
+ int param_len = strlen(arr);
+ char plaintext_string[16 * ceil_num(param_len/16.0)]; 
+ strcpy(plaintext_string,arr);
+ for(int i= strlen(arr); i < strlen(plaintext_string);++i){
+  plaintext_string[i] = 0;
+ }
+ AES128_STRING_parse(key_string, key);
+ AES128_STRING_parse(plaintext_string, plaintext);
+ AES128_ECB_encrypt(plaintext, key, ciphertext);
+ strcpy(arr,ciphertext);
+ int i,j=0;
+ for (i = 0; i < 16; i++){
+  sprintf(arr+j,"%02x", ciphertext[i]);
+  j+=2;
+ } 
+}
+
+void decrypt(char *arr){
+ uint8_t key[16];
+ uint8_t plaintext[16];
+ uint8_t ciphertext[16];
+ int param_len = strlen(arr);
+ char plaintext_string[16 * ceil_num(param_len/16.0)];
+ strcpy(plaintext_string,arr);
+ for(int i= strlen(arr); i < strlen(plaintext_string);++i){
+  plaintext_string[i] = 0;
+ }
+ AES128_STRING_parse(key_string, key);  
+ AES128_STRING_parse(plaintext_string, plaintext);
+ AES128_ECB_decrypt(plaintext, key, ciphertext);
+ strcpy(arr,ciphertext);
+ int i,j=0;
+ for (i = 0; i < 16; i++){
+  sprintf(arr+j,"%02x", ciphertext[i]);
+  j+=2;
+ } 
+}
+
+//Every ta must have a function handler.
+tee_result function_handler(int msg, int func_id ,seL4_Word* param_arr,int length){
+ if(func_id == HELLO_TA_INCREMENT ){
+  
+  return tee_make_result(increment(msg),NULL,0);
+ }else if(func_id == HELLO_TA_DECRYPT){
+  char *temp = (char *)param_arr;
+  decrypt(temp);
+  return tee_make_result(0,temp,length * sizeof(seL4_Word));  
+ }
+ else if(func_id == HELLO_TA_ENCRYPT){
+  char *temp = (char *)param_arr;
+  encrypt(temp);
+  return tee_make_result(0,temp,length * sizeof(seL4_Word));  
+ }else if(func_id == HELLO_TA_DECRYPT){
+  char *temp = (char *)param_arr;
+  decrypt(temp);
+  return tee_make_result(0,temp,length * sizeof(seL4_Word));
+ }
+ else{
+  return tee_ta_failure();
+ }
+}
+</pre>
+<p>
+The function handler is similar to the OPTEE entry point function, It calls respective functions based on ID.
+
+Some features of TEE-OS are:
+<ul>
+<li>Multiple TA support.</li>
+<li>Cryptographic library with AES and hash algorithms</li>
+<li>Multiple function call interface</li>
+<li>Portable to other architectures</li>
+<li>Runs on RISC-V (experimental)</li></ul>
+</p>       </div></div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                 
+                        <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Important Links</h3>
+                        <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
+                            <p>
+                                    
+                                    <h6 style="color:blue">Github: <a target="_blank" href="https://github.com/hybridNeo/tee-os-manifest">https://github.com/hybridNeo/tee-os-manifest</a></h6>
+                                                                
+                                    <h6 style="color:blue">Blog:&nbsp;&nbsp; <a href="http://mahadevrahul.blogspot.in/2016/08/gsoc-lowrisc-trusted-execution.html" target="_blank"> http://mahadevrahul.blogspot.in</a></h6>
+                                    <h6 style="color:blue">lowRISC mention: <a href="http://www.lowrisc.org/blog/2016/06/lowriscs-2016-google-summer-of-code-students/" target="_blank"> http://www.lowrisc.org/</a></h6>
+                                    
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer__left-section">
+                    <div class="mdl-logo">Rahul Shivu Mahadev</div>
+                </div>
+                
+            </footer>
+        </main>
+    </div>
+    <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+</body>
+
+</html>
